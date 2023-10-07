@@ -1,0 +1,9 @@
+objects and its internal representation in Javascript:
+
+   Objects are one of the most important data types in JavaScript, as they can store various kinds of information and functions. Objects are created using either the Object() constructor or the object literal syntax, which uses curly braces {} to define the properties and values of the object. Each property is a key-value pair, where the key can be a string or a symbol, and the value can be any valid JavaScript expression.
+
+   The internal representation of objects in JavaScript is not standardized, and different JavaScript engines may use different methods to store and access them. However, one common way to represent objects is using a hash table, which is a data structure that maps keys to values using a hash function. A hash function is a mathematical operation that converts a key into an index that can be used to locate the value in an array. This way, objects can be accessed quickly by their keys, without having to search through all the properties.
+
+   However, hash tables have some drawbacks, such as collisions (when two keys have the same hash value) and resizing (when the array needs to grow or shrink to accommodate more or fewer elements). To overcome these issues, some JavaScript engines use other techniques to optimize the performance of objects, such as hidden classes, inline caches, or shape trees. These techniques use additional information about the structure and behavior of objects to speed up property access and method calls.
+
+   In summary, objects in JavaScript are collections of key-value pairs that can store various kinds of data and functions. The internal representation of objects is not fixed, and different JavaScript engines may use different methods to optimize their storage and access.

@@ -1,0 +1,28 @@
+Difference between HTTP1.1 vs HTTP2
+
+
+HTTP1.1:
+
+1. HTTP/1.1 works on the textual format, which means that the requests and responses are sent as plain text messages.
+
+2. HTTP/1.1 suffers from head-of-line blocking, which means that only one request can be processed at a time on a single TCP connection. If a request takes a long time to complete, it blocks all the subsequent requests until it is finished.
+
+3. HTTP/1.1 uses request resource inlining, which means that the client has to request each resource separately from the server, such as images, stylesheets, or scripts. This can result in many round trips and increased latency.
+
+4. HTTP/1.1 does not compress the headers of the requests and responses, which can add significant overhead to the network traffic.
+
+
+
+HTTP2:
+
+1. HTTP/2 works on the binary protocol, which means that the requests and responses are converted into binary frames before being sent over the network.
+
+2. HTTP/2 allows multiplexing, which means that multiple requests and responses can be sent and received concurrently on a single TCP connection.
+
+3. HTTP/2 uses server push, which means that the server can proactively send multiple resources to the client without waiting for a request, using a push frame.
+
+4. HTTP/2 uses HPACK, which is a compression algorithm that reduces the size of the headers by eliminating redundancy and using a static and dynamic table.
+
+
+
+These differences make HTTP/2 faster and more reliable than HTTP/1.1, especially for modern web applications that use complex and dynamic content. However, both versions are still compatible with each other, and most web browsers and servers support both protocols.
